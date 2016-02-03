@@ -16,6 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Create Plan Storage
+        let planStore = PlanStore()
+        
+        let navController = window!.rootViewController as! UINavigationController
+        let plansController = navController.topViewController as! PlansViewContoller
+        plansController.planStore = planStore
+        
         return true
     }
 
