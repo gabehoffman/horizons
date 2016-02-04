@@ -46,7 +46,7 @@ class PlansViewContoller: UITableViewController {
             if let row = tableView.indexPathForSelectedRow?.row {
                 
                 // Get the item associated with this row and pass it along
-                let plan = planStore.planStore[row]
+                let plan = planStore.allPlans[row]
                 let singlePlanViewController = segue.destinationViewController as! SinglePlanViewController
                 singlePlanViewController.plan = plan
             }
@@ -99,7 +99,7 @@ class PlansViewContoller: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("PlanViewCell", forIndexPath: <#T##NSIndexPath#>)
+        let cell = tableView.dequeueReusableCellWithIdentifier("PlanViewCell", forIndexPath: indexPath)
         let plan = planStore.allPlans[indexPath.row]
         
         cell.textLabel?.text = plan.title

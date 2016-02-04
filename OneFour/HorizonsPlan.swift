@@ -17,26 +17,20 @@ class HorizonsPlan: NSObject {
     var beyondDescription: String
     var beyondTimelineInMonths: Int
     var backgroundOne: String, backgroundTwo: String, backgroundThree: String, backgroundFour: String
-    var backgroundTimelineInMonths: Int {
-        return beyondTimelineInMonths / 2
-    }
+    var backgroundTimelineInMonths: Int
     var midgroundDescription: String
-    var midgroundTimelineInMonths: Int {
-        return backgroundTimelineInMonths / 2
-    }
+    var midgroundTimelineInMonths: Int
     var foregroundOne: String, foregroundTwo: String, foregroundThree: String, foregroundFour: String
-    var foregroundTimelineInMonths: Int {
-        return backgroundTimelineInMonths / 4
-    }
-    
-    let people = ["Dave's", "Gabe's", "Kim's", "Marci's", "Rebecca's", "Jen's", "Jeremy's"]
-    let adjectives = ["Big", "Huge", "Daring", "Audacious", "Timid", "Brazen", "Bold", "Docile", "Terrible", "Insane", "Ridiculous", "Incredible"]
-    
+    var foregroundTimelineInMonths: Int
     
     init(title: String, planIDNumber: String?, beyondTimelineInMonths: Int) {
         self.title = title
         self.beyondTimelineInMonths = beyondTimelineInMonths
+        backgroundTimelineInMonths = beyondTimelineInMonths / 2
+        midgroundTimelineInMonths = backgroundTimelineInMonths / 2
+        foregroundTimelineInMonths = midgroundTimelineInMonths / 4
         self.planIDNumber = planIDNumber
+        dateCreated = NSDate()
         beyondDescription = "Our big huge amazing vision statement in one paragraph that describes what our group is hoping to accomplish in the next time \(beyondTimelineInMonths)."
         backgroundOne = "The first of four objectives that must be accomplished within the next \(backgroundTimelineInMonths) months for the group to accomplish the vision we have set out."
         backgroundTwo = "The second of four objectives that must be accomplished within the next \(backgroundTimelineInMonths) months for the group to accomplish the vision we have set out."
@@ -47,20 +41,23 @@ class HorizonsPlan: NSObject {
         foregroundTwo = "This is the second of the four things the group wants to accomplish in the next \(foregroundTimelineInMonths) days."
         foregroundThree = "This is the third of the four things the group wants to accomplish in the next \(foregroundTimelineInMonths) days."
         foregroundFour = "This is the forth of the four things the group wants to accomplish in the next \(foregroundTimelineInMonths) days."
-        dateCreated = NSDate()
-        
+        super.init()
     }
     
     convenience init(random: Bool = false) {
+        
+        let people = ["Dave's", "Gabe's", "Kim's", "Marci's", "Rebecca's", "Jen's", "Jeremy's"]
+        let adjectives = ["Big", "Huge", "Daring", "Audacious", "Timid", "Brazen", "Bold", "Docile", "Terrible", "Insane", "Ridiculous", "Incredible"]
+        
         if random {
-            beyondTimelineInMonths = Int(arc4random_uniform(36)) + 12
+            let randomTimeline = Int(arc4random_uniform(36)) + 12
             let peopleRandomIndex = Int(arc4random_uniform(UInt32(people.count - 1)))
             let adjectivesRandomIndex = Int(arc4random_uniform(UInt32(adjectives.count - 1)))
-            title = "\(people[peopleRandomIndex]) \(adjectives[adjectivesRandomIndex]) \(beyondTimelineInMonths) Month Plan"
-            planIDNumber = NSUUID().UUIDString.componentsSeparatedByString("-").first!
-            self.init(title: title, planIDNumber: planIDNumber, beyondTimelineInMonths: beyondTimelineInMonths)
+            let title = "\(people[peopleRandomIndex]) \(adjectives[adjectivesRandomIndex]) \(randomTimeline) Month Plan"
+            let planIDNumber = NSUUID().UUIDString.componentsSeparatedByString("-").first!
+            self.init(title: title, planIDNumber: planIDNumber, beyondTimelineInMonths: randomTimeline)
         } else {
-            self.init(title: "", planIDNumber: nil, beyondTimelineInMonths: beyondTimelineInMonths)
+            self.init(title: "", planIDNumber: nil, beyondTimelineInMonths: 12)
         }
     }
     
