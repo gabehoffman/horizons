@@ -12,14 +12,14 @@ class PlanStore {
     var allPlans: [HorizonsPlan] = []
     
     func createEmptyPlan() -> HorizonsPlan {
-        let newPlan = HorizonsPlan()
+        let newPlan = HorizonsPlan(random: true)
         allPlans.append(newPlan)
         return newPlan
     }
     
     func createEmptyPlans(count: Int) {
         for _ in 1..<count {
-            let newPlan = HorizonsPlan()
+            let newPlan = HorizonsPlan(random: true)
             allPlans.append(newPlan)
         }
     }

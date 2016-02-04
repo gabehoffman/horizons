@@ -12,6 +12,12 @@ class PlansViewContoller: UITableViewController {
     
     var planStore: PlanStore!
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        navigationItem.leftBarButtonItem = editButtonItem()
+    }
+    
     @IBAction func addNewPlan(sender: AnyObject) {
         // Create a new Item and add it to the store
         let newPlan = planStore.createEmptyPlan()
@@ -99,11 +105,11 @@ class PlansViewContoller: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("PlanViewCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("PlanCell", forIndexPath: indexPath) as! PlanCell
         let plan = planStore.allPlans[indexPath.row]
         
-        cell.textLabel?.text = plan.title
-        cell.detailTextLabel?.text = plan.planIDNumber
+        cell.planLabel.text = plan.title
+        cell.planIDNumberLabel.text = plan.planIDNumber
         
         return cell
     }

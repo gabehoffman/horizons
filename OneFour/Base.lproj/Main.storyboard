@@ -15,13 +15,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="JUC-sF-rJa">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlanCell" id="JUC-sF-rJa" customClass="PlanCell" customModule="HorizonsPlanningTool" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JUC-sF-rJa" id="I7F-Rd-2QO">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PlanName" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0x-FY-EAu">
+                                            <rect key="frame" x="8" y="11" width="78" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="PlanID" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEE-ut-p22">
+                                            <rect key="frame" x="543" y="11" width="49" height="21"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="s0x-FY-EAu" firstAttribute="centerY" secondItem="I7F-Rd-2QO" secondAttribute="centerY" id="8BW-wB-1a3"/>
+                                        <constraint firstItem="s0x-FY-EAu" firstAttribute="leading" secondItem="I7F-Rd-2QO" secondAttribute="leadingMargin" id="ea3-Pg-9bg"/>
+                                        <constraint firstItem="ZEE-ut-p22" firstAttribute="trailing" secondItem="I7F-Rd-2QO" secondAttribute="trailingMargin" id="t67-mI-dXQ"/>
+                                        <constraint firstItem="ZEE-ut-p22" firstAttribute="centerY" secondItem="I7F-Rd-2QO" secondAttribute="centerY" id="ty8-ws-MT2"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="planIDNumberLabel" destination="ZEE-ut-p22" id="GBe-5p-OIO"/>
+                                    <outlet property="planLabel" destination="s0x-FY-EAu" id="RR2-2B-t9c"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -29,7 +53,13 @@
                             <outlet property="delegate" destination="mfg-t2-9dp" id="IEa-X7-ouh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="zFg-Yi-rhp"/>
+                    <navigationItem key="navigationItem" title="Horizons Planning Tool" id="zFg-Yi-rhp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Mni-Jp-owX">
+                            <connections>
+                                <action selector="addNewPlan:" destination="mfg-t2-9dp" id="f3g-XI-Lqg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxf-8D-eb9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

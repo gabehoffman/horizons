@@ -12,12 +12,10 @@ class PlanCell: UITableViewCell {
     
     @IBOutlet var planLabel: UILabel!
     @IBOutlet var planIDNumberLabel: UILabel!
-    @IBOutlet var monthsLabel: UILabel!
     
     func updateLabels() {
         let bodyFont = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
         planLabel.font = bodyFont
-        monthsLabel.font = bodyFont
         
         let caption1Font = UIFont.preferredFontForTextStyle(UIFontTextStyleCaption1)
         planIDNumberLabel.font = caption1Font
