@@ -31,16 +31,16 @@ class HorizonsPlan: NSObject {
         foregroundTimelineInMonths = midgroundTimelineInMonths / 4
         self.planIDNumber = planIDNumber
         dateCreated = NSDate()
-        beyondDescription = "Our big huge amazing vision statement in one paragraph that describes what our group is hoping to accomplish in the next time \(beyondTimelineInMonths)."
-        backgroundOne = "The first of four objectives that must be accomplished within the next \(backgroundTimelineInMonths) months for the group to accomplish the vision we have set out."
-        backgroundTwo = "The second of four objectives that must be accomplished within the next \(backgroundTimelineInMonths) months for the group to accomplish the vision we have set out."
-        backgroundThree = "The third of four objectives that must be accomplished within the next \(backgroundTimelineInMonths) months for the group to accomplish the vision we have set out."
-        backgroundFour = "The last of four objectives that must be accomplished within the next \(backgroundTimelineInMonths) months for the group to accomplish the vision we have set out."
+        beyondDescription = "Our big huge amazing vision statement in one paragraph that describes what our group is hoping to accomplish in the next \(beyondTimelineInMonths) months."
+        backgroundOne = "The first of four objectives that must be accomplished within the next \(backgroundTimelineInMonths) months for the vision we have set out."
+        backgroundTwo = "The second of four objectives that must be accomplished within the next \(backgroundTimelineInMonths) months for the vision we have set out."
+        backgroundThree = "The third of four objectives that must be accomplished within the next \(backgroundTimelineInMonths) months for the vision we have set out."
+        backgroundFour = "The last of four objectives that must be accomplished within the next \(backgroundTimelineInMonths) months for the vision we have set out."
         midgroundDescription = "This is the one most important goal which must be accomplished in the first \(midgroundTimelineInMonths) months for the group to be on task toward completion of it’s \(backgroundTimelineInMonths) month aims."
-        foregroundOne = "This is the first of the four things the group wants to accomplish in the next \(foregroundTimelineInMonths) days."
-        foregroundTwo = "This is the second of the four things the group wants to accomplish in the next \(foregroundTimelineInMonths) days."
-        foregroundThree = "This is the third of the four things the group wants to accomplish in the next \(foregroundTimelineInMonths) days."
-        foregroundFour = "This is the forth of the four things the group wants to accomplish in the next \(foregroundTimelineInMonths) days."
+        foregroundOne = "This is the first of the four things the group wants to accomplish in the next \(foregroundTimelineInMonths * 30) days."
+        foregroundTwo = "This is the second of the four things the group wants to accomplish in the next \(foregroundTimelineInMonths * 30) days."
+        foregroundThree = "This is the third of the four things the group wants to accomplish in the next \(foregroundTimelineInMonths * 30) days."
+        foregroundFour = "This is the forth of the four things the group wants to accomplish in the next \(foregroundTimelineInMonths * 30) days."
         super.init()
     }
     

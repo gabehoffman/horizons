@@ -45,6 +45,7 @@
                                 <connections>
                                     <outlet property="planIDNumberLabel" destination="ZEE-ut-p22" id="GBe-5p-OIO"/>
                                     <outlet property="planLabel" destination="s0x-FY-EAu" id="RR2-2B-t9c"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowPlan" id="tTf-P5-TBG"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -65,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="1256" y="-307"/>
         </scene>
-        <!--Plan-->
+        <!--Single Plan View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Plan" id="BYZ-38-t0r" customClass="ViewController" customModule="HorizonsPlanningTool" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SinglePlanViewController" customModule="HorizonsPlanningTool" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -77,33 +78,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="8R9-HH-SPS">
-                                <rect key="frame" x="20" y="28" width="560" height="552"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="8R9-HH-SPS">
+                                <rect key="frame" x="20" y="28" width="560" height="508"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="dje-DI-avK">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="107"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="98"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="248" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Your Big Big Vision" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pne-IP-HbL">
-                                                <rect key="frame" x="0.0" y="0.0" width="345" height="107"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="248" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your Big Big Vision" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pne-IP-HbL">
+                                                <rect key="frame" x="0.0" y="0.0" width="352" height="98"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="olp-vd-7Il">
-                                                <rect key="frame" x="345" y="0.0" width="215" height="107"/>
+                                                <rect key="frame" x="352" y="0.0" width="208" height="98"/>
                                                 <subviews>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="right" contentVerticalAlignment="center" borderStyle="bezel" placeholder="36 Months" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OHX-Bu-XKu">
-                                                        <rect key="frame" x="0.0" y="0.0" width="215" height="51"/>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="right" contentVerticalAlignment="center" placeholder="36 Months" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OHX-Bu-XKu">
+                                                        <rect key="frame" x="0.0" y="0.0" width="208" height="43"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Created" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEs-0b-Vtc">
-                                                        <rect key="frame" x="0.0" y="51" width="215" height="28"/>
+                                                        <rect key="frame" x="0.0" y="43" width="208" height="28"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plan ID Number" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZF-2L-fbH">
-                                                        <rect key="frame" x="0.0" y="79" width="215" height="28"/>
+                                                        <rect key="frame" x="0.0" y="71" width="208" height="27"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -113,81 +114,81 @@
                                         </subviews>
                                     </stackView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rHx-d4-MNn">
-                                        <rect key="frame" x="0.0" y="111" width="560" height="107"/>
+                                        <rect key="frame" x="0.0" y="102" width="560" height="99"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</string>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="hxX-vy-Jwh">
-                                        <rect key="frame" x="0.0" y="222" width="560" height="108"/>
+                                        <rect key="frame" x="0.0" y="205" width="560" height="98"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LNI-wK-Dgg">
-                                                <rect key="frame" x="0.0" y="0.0" width="137" height="108"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="137" height="98"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <string key="text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</string>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xP3-r8-m1e">
-                                                <rect key="frame" x="141" y="0.0" width="137" height="108"/>
+                                                <rect key="frame" x="141" y="0.0" width="137" height="98"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <string key="text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</string>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fZ9-eg-djn">
-                                                <rect key="frame" x="282" y="0.0" width="137" height="108"/>
+                                                <rect key="frame" x="282" y="0.0" width="137" height="98"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <string key="text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</string>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="grp-7C-9rD">
-                                                <rect key="frame" x="423" y="0.0" width="137" height="108"/>
+                                                <rect key="frame" x="423" y="0.0" width="137" height="98"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <string key="text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</string>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                         </subviews>
                                     </stackView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2og-qT-O0b">
-                                        <rect key="frame" x="0.0" y="334" width="560" height="107"/>
+                                        <rect key="frame" x="0.0" y="307" width="560" height="99"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <string key="text">Enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </string>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="4jC-Cc-sR3">
-                                        <rect key="frame" x="0.0" y="445" width="560" height="107"/>
+                                        <rect key="frame" x="0.0" y="410" width="560" height="98"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zSL-so-PZf">
-                                                <rect key="frame" x="0.0" y="0.0" width="137" height="107"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="137" height="98"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4lL-M9-yxT">
-                                                <rect key="frame" x="141" y="0.0" width="137" height="107"/>
+                                                <rect key="frame" x="141" y="0.0" width="137" height="98"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="05u-BS-y1r">
-                                                <rect key="frame" x="282" y="0.0" width="137" height="107"/>
+                                                <rect key="frame" x="282" y="0.0" width="137" height="98"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Qea-dE-8EV">
-                                                <rect key="frame" x="423" y="0.0" width="137" height="107"/>
+                                                <rect key="frame" x="423" y="0.0" width="137" height="98"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                         </subviews>
@@ -203,10 +204,26 @@
                             <constraint firstItem="8R9-HH-SPS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="ZE0-LU-QFo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundTextViewFour" destination="grp-7C-9rD" id="dAV-d7-7rU"/>
+                        <outlet property="backgroundTextViewOne" destination="LNI-wK-Dgg" id="pEE-1b-vQo"/>
+                        <outlet property="backgroundTextViewThree" destination="fZ9-eg-djn" id="rZk-an-Mej"/>
+                        <outlet property="backgroundTextViewTwo" destination="xP3-r8-m1e" id="B78-F8-1rf"/>
+                        <outlet property="beyondTextView" destination="rHx-d4-MNn" id="oIg-3o-DQg"/>
+                        <outlet property="dateCreatedLabel" destination="LEs-0b-Vtc" id="1fr-bs-LSE"/>
+                        <outlet property="foregroundTextViewFour" destination="Qea-dE-8EV" id="ktZ-6b-1IZ"/>
+                        <outlet property="foregroundTextViewOne" destination="zSL-so-PZf" id="vfd-CY-7vf"/>
+                        <outlet property="foregroundTextViewThree" destination="05u-BS-y1r" id="hiY-IK-XBA"/>
+                        <outlet property="foregroundTextViewTwo" destination="4lL-M9-yxT" id="AFx-rT-Vdv"/>
+                        <outlet property="midgroundTextView" destination="2og-qT-O0b" id="RUQ-dh-Enz"/>
+                        <outlet property="planIDNumberLabel" destination="oZF-2L-fbH" id="I8p-Ey-ITL"/>
+                        <outlet property="timelineField" destination="OHX-Bu-XKu" id="vxu-J6-97U"/>
+                        <outlet property="titleField" destination="Pne-IP-HbL" id="u6u-Ow-pi1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="451" y="504"/>
+            <point key="canvasLocation" x="1256" y="440"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="k65-i7-qjC">

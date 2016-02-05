@@ -1,0 +1,312 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3DAC88441C61327300D4516A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC88431C61327300D4516A /* AppDelegate.swift */; };
+		3DAC88491C61327300D4516A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DAC88471C61327300D4516A /* Main.storyboard */; };
+		3DAC884B1C61327300D4516A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DAC884A1C61327300D4516A /* Assets.xcassets */; };
+		3DAC884E1C61327300D4516A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DAC884C1C61327300D4516A /* LaunchScreen.storyboard */; };
+		3DAC88561C613B1900D4516A /* HorizonsPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC88551C613B1900D4516A /* HorizonsPlan.swift */; };
+		3DAC88581C613F3900D4516A /* PlansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC88571C613F3900D4516A /* PlansViewController.swift */; };
+		3DAC885A1C6149DD00D4516A /* PlanStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC88591C6149DD00D4516A /* PlanStore.swift */; };
+		3DAC885E1C62487E00D4516A /* PlanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC885D1C62487E00D4516A /* PlanCell.swift */; };
+		3DAC88601C6248ED00D4516A /* SinglePlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC885F1C6248ED00D4516A /* SinglePlanViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3DAC88401C61327300D4516A /* HorizonsPlanningTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HorizonsPlanningTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DAC88431C61327300D4516A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3DAC88481C61327300D4516A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3DAC884A1C61327300D4516A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3DAC884D1C61327300D4516A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3DAC884F1C61327300D4516A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DAC88551C613B1900D4516A /* HorizonsPlan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizonsPlan.swift; sourceTree = "<group>"; };
+		3DAC88571C613F3900D4516A /* PlansViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlansViewController.swift; sourceTree = "<group>"; };
+		3DAC88591C6149DD00D4516A /* PlanStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanStore.swift; sourceTree = "<group>"; };
+		3DAC885D1C62487E00D4516A /* PlanCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanCell.swift; sourceTree = "<group>"; };
+		3DAC885F1C6248ED00D4516A /* SinglePlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinglePlanViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3DAC883D1C61327300D4516A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3DAC88371C61327300D4516A = {
+			isa = PBXGroup;
+			children = (
+				3DAC88421C61327300D4516A /* HorizonsPlanningTool */,
+				3DAC88411C61327300D4516A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3DAC88411C61327300D4516A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3DAC88401C61327300D4516A /* HorizonsPlanningTool.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3DAC88421C61327300D4516A /* HorizonsPlanningTool */ = {
+			isa = PBXGroup;
+			children = (
+				3DAC88431C61327300D4516A /* AppDelegate.swift */,
+				3DAC88471C61327300D4516A /* Main.storyboard */,
+				3DAC884A1C61327300D4516A /* Assets.xcassets */,
+				3DAC884C1C61327300D4516A /* LaunchScreen.storyboard */,
+				3DAC884F1C61327300D4516A /* Info.plist */,
+				3DAC88571C613F3900D4516A /* PlansViewController.swift */,
+				3DAC88551C613B1900D4516A /* HorizonsPlan.swift */,
+				3DAC88591C6149DD00D4516A /* PlanStore.swift */,
+				3DAC885D1C62487E00D4516A /* PlanCell.swift */,
+				3DAC885F1C6248ED00D4516A /* SinglePlanViewController.swift */,
+			);
+			name = HorizonsPlanningTool;
+			path = OneFour;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3DAC883F1C61327300D4516A /* HorizonsPlanningTool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DAC88521C61327300D4516A /* Build configuration list for PBXNativeTarget "HorizonsPlanningTool" */;
+			buildPhases = (
+				3DAC883C1C61327300D4516A /* Sources */,
+				3DAC883D1C61327300D4516A /* Frameworks */,
+				3DAC883E1C61327300D4516A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HorizonsPlanningTool;
+			productName = OneFour;
+			productReference = 3DAC88401C61327300D4516A /* HorizonsPlanningTool.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3DAC88381C61327300D4516A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Hoffman Tools";
+				TargetAttributes = {
+					3DAC883F1C61327300D4516A = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 52C9SM2JR3;
+					};
+				};
+			};
+			buildConfigurationList = 3DAC883B1C61327300D4516A /* Build configuration list for PBXProject "HorizonsPlanningTool" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3DAC88371C61327300D4516A;
+			productRefGroup = 3DAC88411C61327300D4516A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3DAC883F1C61327300D4516A /* HorizonsPlanningTool */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3DAC883E1C61327300D4516A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DAC884E1C61327300D4516A /* LaunchScreen.storyboard in Resources */,
+				3DAC884B1C61327300D4516A /* Assets.xcassets in Resources */,
+				3DAC88491C61327300D4516A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3DAC883C1C61327300D4516A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DAC885E1C62487E00D4516A /* PlanCell.swift in Sources */,
+				3DAC88601C6248ED00D4516A /* SinglePlanViewController.swift in Sources */,
+				3DAC88581C613F3900D4516A /* PlansViewController.swift in Sources */,
+				3DAC88441C61327300D4516A /* AppDelegate.swift in Sources */,
+				3DAC885A1C6149DD00D4516A /* PlanStore.swift in Sources */,
+				3DAC88561C613B1900D4516A /* HorizonsPlan.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3DAC88471C61327300D4516A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DAC88481C61327300D4516A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3DAC884C1C61327300D4516A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DAC884D1C61327300D4516A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3DAC88501C61327300D4516A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3DAC88511C61327300D4516A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3DAC88531C61327300D4516A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = OneFour/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tools.hoffman.OneFour;
+				PRODUCT_NAME = HorizonsPlanningTool;
+			};
+			name = Debug;
+		};
+		3DAC88541C61327300D4516A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = OneFour/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tools.hoffman.OneFour;
+				PRODUCT_NAME = HorizonsPlanningTool;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3DAC883B1C61327300D4516A /* Build configuration list for PBXProject "HorizonsPlanningTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DAC88501C61327300D4516A /* Debug */,
+				3DAC88511C61327300D4516A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DAC88521C61327300D4516A /* Build configuration list for PBXNativeTarget "HorizonsPlanningTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DAC88531C61327300D4516A /* Debug */,
+				3DAC88541C61327300D4516A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3DAC88381C61327300D4516A /* Project object */;
+}

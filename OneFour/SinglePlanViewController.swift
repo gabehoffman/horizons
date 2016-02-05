@@ -43,7 +43,7 @@ class SinglePlanViewController: UIViewController, UITextFieldDelegate {
         super.viewWillAppear(animated)
         
         titleField.text = plan.title
-        timelineField.text = "\(plan.backgroundTimelineInMonths) Months"
+        timelineField.text = "\(plan.beyondTimelineInMonths) Months"
         planIDNumberLabel.text = plan.planIDNumber
         dateCreatedLabel.text = dateFormatter.stringFromDate(plan.dateCreated)
         
